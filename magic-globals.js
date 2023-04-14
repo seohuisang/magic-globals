@@ -59,9 +59,9 @@ Object.defineProperty(global, '__base', {
 Object.defineProperty(global, '__fili', {
   get: function(){
     filid = ':'
-    if ( typeof GLOBAL.__filid !== 'undefined' && GLOBAL.__filid )
+    if ( typeof global.__filid !== 'undefined' && global.__filid )
     {
-      filid = GLOBAL.__filid;
+      filid = global.__filid;
     }
 
     return __stack[1].getFileName() + filid + __stack[1].getLineNumber();
